@@ -1,0 +1,14 @@
+{
+  "name": "mern_starter",
+  "version": "1.0.0",
+  "description": "A starter pack for MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "faheem",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
