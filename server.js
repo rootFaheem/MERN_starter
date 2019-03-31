@@ -1,7 +1,16 @@
 const express = require("express");
 const app = express();
 
+const mongoose = require("mongoose");
+
 const port = 5000;
+
+const db = require("./config/keys").mongoURI;
+
+mongoose
+  .connect(db)
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.log(err));
 
 // @homepage route
 app.use("/", require("./routes/index"));
