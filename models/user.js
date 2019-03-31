@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const schema = mongoose.Schema();
+const schema = mongoose.Schema;
 
 const UserSchema = new schema({
   name: {
@@ -8,10 +8,6 @@ const UserSchema = new schema({
   },
   age: {
     type: Number,
-    required: true
-  },
-  dev: {
-    type: Boolean,
     required: true
   }
 });

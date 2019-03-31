@@ -1,11 +1,14 @@
 const express = require("express");
 const app = express();
-
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
 const port = 5000;
 
 const db = require("./config/keys").mongoURI;
+
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
 
 mongoose
   .connect(db)
