@@ -4,8 +4,10 @@ const app = express();
 const port = 5000;
 
 // @homepage route
-app.get("/", (req, res) => res.send("HOME PAGE"));
-app.get("/xyz", (req, res) => res.send("xyz abc"));
+app.use("/", require("./routes/index"));
+
+// @user route
+app.use("/user", require("./routes/users.js"));
 
 // Server listen to PORT 5000
 app.listen(port, (req, res) => console.log(`server is running at ${port}...`));
